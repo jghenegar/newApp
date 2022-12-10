@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+  resources :tags
+
   #get "/articles:id", to: "articles#show"
   mount Avo::Engine, at: Avo.configuration.root_path
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
